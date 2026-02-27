@@ -2,9 +2,13 @@
   "name": "3dprint-cost-calculator",
   "version": "1.0.0",
   "scripts": {
-    "dev": "http-server . -o -p 3000"
+    "build": "tailwindcss -i src/input.css -o dist/output.css --minify",
+    "build:css": "tailwindcss -i src/input.css -o dist/output.css --minify",
+    "watch:css": "tailwindcss -i src/input.css -o dist/output.css --watch",
+    "dev": "tailwindcss -i src/input.css -o dist/output.css --watch & http-server . -o -p 3000"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "tailwindcss": "^3.4.0"
   }
 }
